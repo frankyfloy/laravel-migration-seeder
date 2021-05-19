@@ -16,8 +16,8 @@ class CreateTravelPackagesTable extends Migration
         Schema::create('travel_packages', function (Blueprint $table) {
             $table->id();
             $table->string('destination', 100);
-            $table->year('departure');
-            $table->year('return');
+            $table->date('departure');
+            $table->date('return');
             $table->string('airlineCompany', 100);
             $table->boolean('lunchPackage')->nullable()->default(false);
             $table->boolean('accommodation')->nullable()->default(false);
